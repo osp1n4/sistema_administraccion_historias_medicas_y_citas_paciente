@@ -1,36 +1,24 @@
-package com.sofkau.qa.repository;
+package com.sofkau.qa.repository.model;
 
 public abstract class  Paciente {
-    private  String id_paciente;
-    private String cc;
+    private String cc_paciente;
     private String nombre;
-    private String historiaMedica;
+
 
     public Paciente() {
     }
 
-    public Paciente(String id_paciente, String cc, String nombre, String historiaMedica) {
-        this.id_paciente = id_paciente;
-        this.cc = cc;
+    public Paciente(String cc_paciente, String nombre) {
+        this.cc_paciente = cc_paciente;
         this.nombre = nombre;
-        this.historiaMedica = historiaMedica;
     }
 
-    public String id_paciente() {
-        return id_paciente;
+    public String cc_paciente() {
+        return cc_paciente;
     }
 
-    public Paciente setId_paciente(String id_paciente) {
-        this.id_paciente = id_paciente;
-        return this;
-    }
-
-    public String cc() {
-        return cc;
-    }
-
-    public Paciente setCc(String cc) {
-        this.cc = cc;
+    public Paciente setCc_paciente(String cc_paciente) {
+        this.cc_paciente = cc_paciente;
         return this;
     }
 
@@ -43,13 +31,11 @@ public abstract class  Paciente {
         return this;
     }
 
-    public String historiaMedica() {
-        return historiaMedica;
+    @Override
+    public String toString() {
+        return "Paciente{" +
+                "cc_paciente='" + cc_paciente + '\'' +
+                ", nombre='" + nombre + '\'' +
+                '}';
     }
-
-    public Paciente setHistoriaMedica(String historiaMedica) {
-        this.historiaMedica = historiaMedica;
-        return this;
-    }
-
 }
