@@ -3,16 +3,16 @@ package com.sofkau.qa.repository;
 import com.sofkau.qa.repository.model.Cita;
 import org.springframework.stereotype.Repository;
 
-@Repository
-public class CitaRepository extends Cita {
+import java.util.ArrayList;
+import java.util.List;
 
+@Repository
+public class CitaRepository {
+
+    public List<Cita> citas;
 
     public CitaRepository() {
+        this.citas = new ArrayList<>();
     }
 
-    public CitaRepository(String duracionConsulta, String horarioCita, PacienteRepository pacienteRepository) {
-        super(duracionConsulta,horarioCita);
-        pacienteRepository.nombre();
-        pacienteRepository.cc_paciente();
-    }
 }

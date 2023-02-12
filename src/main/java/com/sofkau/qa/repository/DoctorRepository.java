@@ -14,13 +14,13 @@ public class DoctorRepository {
     private final String nombre = "Ramiro Fernandez";
     private HashMap<String,PacienteRepository> listaPaciente;
     private String clave = String.valueOf(UUID.randomUUID());
-
+/*
     public DoctorRepository() {
         this.listaPaciente = new HashMap<>();
         listaPaciente.put(clave,new PacienteRepository("142334","Emilia"));
 
     }
-
+*/
     public int id_medico() {
         return id_medico;
     }
@@ -30,6 +30,7 @@ public class DoctorRepository {
     }
 
     public HashMap<String, PacienteRepository> listaPaciente() {
+
         return listaPaciente;
     }
 

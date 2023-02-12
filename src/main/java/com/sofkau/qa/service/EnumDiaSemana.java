@@ -1,27 +1,25 @@
-package com.sofkau.qa.repository;
+package com.sofkau.qa.service;
 
 import com.sofkau.qa.repository.model.Cita;
-import org.springframework.stereotype.Repository;
 
 import java.util.LinkedList;
 import java.util.List;
 
-@Repository
-public enum DiaSemanaRepository {
+public enum EnumDiaSemana {
     LUNES("08:00","17:00"),
     MARTES("08:00","17:00"),
     MIERCOLES("08:00","17:00"),
     JUEVES("08:00","17:00"),
-    VIERNES("08:00","17:00");
+    VIERNES("08:00","15:00");
 
     private String horarioEntrada;
     private String horarioSalida;
     private List<Cita> agenda;
-   private DiaSemanaRepository() {
+   private EnumDiaSemana() {
 
     }
 
-    DiaSemanaRepository(String horarioEntrada, String horarioSalida) {
+    EnumDiaSemana(String horarioEntrada, String horarioSalida) {
         this.horarioEntrada = horarioEntrada;
         this.horarioSalida = horarioSalida;
         this.agenda = new LinkedList<>();
@@ -31,7 +29,7 @@ public enum DiaSemanaRepository {
         return horarioEntrada;
     }
 
-    public DiaSemanaRepository setHorarioEntrada(String horarioEntrada) {
+    public EnumDiaSemana setHorarioEntrada(String horarioEntrada) {
         this.horarioEntrada = horarioEntrada;
         return this;
     }
@@ -40,14 +38,14 @@ public enum DiaSemanaRepository {
         return horarioSalida;
     }
 
-    public DiaSemanaRepository setHorarioSalida(String horarioSalida) {
+    public EnumDiaSemana setHorarioSalida(String horarioSalida) {
         this.horarioSalida = horarioSalida;
         return this;
     }
 
     @Override
     public String toString() {
-        return "DiaSemanaRepository{" +
+        return "EnumDiaSemana{" +
                 "horarioEntrada='" + horarioEntrada + '\'' +
                 ", horarioSalida='" + horarioSalida + '\'' +
                 ", agenda=" + agenda +

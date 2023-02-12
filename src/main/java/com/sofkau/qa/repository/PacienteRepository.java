@@ -1,5 +1,4 @@
 package com.sofkau.qa.repository;
-
 import com.sofkau.qa.repository.model.Paciente;
 import org.springframework.stereotype.Repository;
 
@@ -7,31 +6,25 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Repository
-public class PacienteRepository extends Paciente {
+public class PacienteRepository {
 
-    private List<String> historialMedico;
+public List<Paciente> pacientes;
 
     public PacienteRepository() {
-        this.historialMedico = new ArrayList<>();
-    }
-    public PacienteRepository(String cc_paciente, String nombre) {
-        super(cc_paciente, nombre);
-        this.historialMedico = new ArrayList<>();
+        this.pacientes = new ArrayList<>();
     }
 
-    public List<String> historialMedico() {
-        return historialMedico;
+    public  void agregarPaciente(Paciente paciente){
+        pacientes.add(paciente);
     }
 
-    public PacienteRepository setHistorialMedico(List<String> historialMedico) {
-        this.historialMedico = historialMedico;
-        return this;
+    public void listarPaciente(){
+        pacientes.stream().forEach(paciente -> System.out.println(paciente.nombre()));
     }
 
-    @Override
-    public String toString() {
-        return "PacienteRepository{" +
-                "historialMedico=" + historialMedico +
-                '}';
+    public List<Paciente> getPacientes(){
+        this.listarPaciente();
+        return pacientes;
     }
+
 }

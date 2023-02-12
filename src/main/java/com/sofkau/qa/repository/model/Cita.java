@@ -2,7 +2,7 @@ package com.sofkau.qa.repository.model;
 
 import java.util.UUID;
 
-public abstract class Cita {
+public class Cita {
     private String id_cita;
     private String duracionConsulta;
     private String horarioCita;
