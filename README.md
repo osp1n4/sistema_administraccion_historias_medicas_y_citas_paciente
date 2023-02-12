@@ -29,4 +29,4 @@ Se realizó una separación de los objetos que se va a utlizar, resultando las s
  
 
 ## Patrones de diseño
-Factory Method: Se aplicó al crearse la interface IDoctorService
+Factory Method: Se aplicó al crearse la interface IDoctorService y IPacienteService
